@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int find_threes(vector<int>x){
+  int sum=0;
+  int rem;
+  for (int y=0;y<x.size();y++){
+    rem=x[y]%3;
+    if (rem==0){
+    sum=sum+x[y];
+    }
+    }
+  return sum;
+  }
+int main(){
+vector<int>x(8);
+   x[0]=0;
+  x[1]=4;
+  x[2]=2;
+  x[3]=6;
+  x[4]=9;
+  x[5]=8;
+  x[6]=3;
+  x[7]=12;
+  cout<<"The total sum of the numbers divisible by 3 is "<<find_threes(x)<<endl;
+  return 0;
+}
